@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<p id="result"></p>
+<form id="registration-form" name="registration-form"  method="post" onSubmit="return(validate())" >
+    <div class='form-group'>
+        <h2 align="center">VALIDATION FORM</h2>
+        First Name&nbsp: <input type="text" id="firstname" required><br><br>
+        Last Name&nbsp: <input type="text" id="lastname" required><br><br>
+        Email
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp :
+        <input type="email" id="email" required><br><br>
+        Confirm Email:
+        <input type="email" id="confirmEmail" onblur="emailValidate(this)" required><br><br>
+        Gender&nbsp&nbsp:
+        <input type="radio" name="gender" id="geneder" value="Male" checked>Male
+        <input type="radio" name="gender" id="gender" value="Female">Female<br><br>
+        Phone No.&nbsp&nbsp:
+        <input type="text" id="phone" pattern="[1-9]{1}[0-9]{9}" maxlength="10" required><br><br>
+        <button type="submit" id="submit" class="btn" onclick="submitForm()">Submit</button>
+    </div>
+</form>
+<script src="app.js"></script>
+</body>
+</html>
